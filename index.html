@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOVA — Privacy Policy / Politique de Confidentialité</title>
+  <style>
+    :root {
+      --bg: #0b0b10;
+      --card: #15151c;
+      --text: #e8e8f0;
+      --muted: #a0a0b0;
+      --accent: #7c5cff;
+      --border: #25252e;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo {
+      display: inline-block;
+      width: 64px; height: 64px;
+      background: var(--accent);
+      border-radius: 16px;
+      color: white;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 64px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0 0 4px;
+    }
+    .updated {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 24px 0 40px;
+    }
+    .lang-toggle button {
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .lang-toggle button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    section.lang { display: none; }
+    section.lang.active { display: block; }
+    h2 {
+      font-size: 20px;
+      margin-top: 32px;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    h3 {
+      font-size: 16px;
+      margin-top: 16px;
+      margin-bottom: 4px;
+      color: var(--muted);
+    }
+    p, li { color: var(--text); }
+    ul { padding-left: 20px; }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+    code {
+      background: var(--card);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">K</div>
+      <h1>KOVA — Privacy Policy</h1>
+      <div class="updated">Last updated / Dernière mise à jour : June 12, 2026</div>
+    </header>
+
+    <div class="lang-toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+      <button id="btn-fr" onclick="setLang('fr')">Français</button>
+    </div>
+
+    <!-- ──────────────────────────────────────────────────────── ENGLISH -->
+    <section id="lang-en" class="lang active">
+      <p>KOVA is an AI-powered fitness coaching app for strength and running. This Privacy Policy explains what data we collect, how we use it, and the choices you have.</p>
+
+      <h2>1. Who we are</h2>
+      <p>KOVA is operated by Enzo Bertolami (the "Developer"). Contact: <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a>.</p>
+
+      <h2>2. Data we collect</h2>
+
+      <h3>2.1 Profile you provide</h3>
+      <ul>
+        <li>First name (optional)</li>
+        <li>Age, sex, height, weight, weight unit</li>
+        <li>Training preferences: goal, level, days per week, session length, training time, sport focus (strength / running / both), available equipment, injuries</li>
+        <li>Running profile: target distance, current pace, weekly mileage, race date</li>
+        <li>Strength baselines: 1-rep-max for squat, bench, deadlift, overhead press</li>
+        <li>Nutrition preferences: diet type, allergies, caloric goal, cook time, grocery budget, custom macro targets</li>
+        <li>Coach preferences: coaching style, voice replies, language, notification settings</li>
+      </ul>
+
+      <h3>2.2 Apple HealthKit (only with your explicit consent)</h3>
+      <p>If you enable HealthKit in Settings → Connections, KOVA reads the following from Apple Health to personalize coaching:</p>
+      <ul>
+        <li>Sleep hours</li>
+        <li>Heart Rate Variability (HRV)</li>
+        <li>Resting Heart Rate</li>
+        <li>Steps and active energy (today)</li>
+        <li>Workouts and runs (recent history)</li>
+        <li>Body weight history</li>
+        <li>VO2 Max</li>
+      </ul>
+      <p>This data <strong>stays on your device</strong> and is sent to our coach AI only as part of the coaching context. You can revoke HealthKit access any time in iOS Settings → Privacy → Health.</p>
+
+      <h3>2.3 Logs you create</h3>
+      <ul>
+        <li>Workout sessions (exercises, weights, reps, RPE, duration)</li>
+        <li>Runs (distance, pace, duration)</li>
+        <li>Food logs (meals, macros)</li>
+        <li>Body weight measurements</li>
+        <li>Personal records (PRs)</li>
+        <li>Conversations with the AI coach (text + transient voice recordings)</li>
+      </ul>
+
+      <h3>2.4 Voice (if you use the voice features)</h3>
+      <p>When you hold the microphone button or use voice during a workout, a short audio recording is captured locally, then sent to our backend for transcription (OpenAI Whisper). The text is then processed by our coach AI (Anthropic Claude). The audio is <strong>not stored</strong> after transcription. Coach replies may be synthesized to audio via ElevenLabs and played back.</p>
+
+      <h3>2.5 What we do NOT collect</h3>
+      <ul>
+        <li>No advertising identifiers</li>
+        <li>No location tracking beyond what HealthKit provides if you enable it</li>
+        <li>No contacts, photos, calendar</li>
+        <li>No payment info (Premium is handled by Apple via the App Store)</li>
+      </ul>
+
+      <h2>3. How we use your data</h2>
+      <ul>
+        <li>Generate your personalized training program (weekly plan, daily session)</li>
+        <li>Provide AI coaching responses tailored to your data</li>
+        <li>Adapt training load based on recovery signals (sleep, HRV, RHR)</li>
+        <li>Calculate calorie and macro targets (TDEE)</li>
+        <li>Detect plateaus, suggest deloads, recognize PRs</li>
+        <li>Diagnose crashes and improve app stability (via Sentry, anonymized)</li>
+      </ul>
+      <p>We <strong>do not sell</strong> your data. We <strong>do not use</strong> your data for advertising.</p>
+
+      <h2>4. Third-party processors</h2>
+      <p>To deliver the service, we share minimal data with the following providers, each under their own privacy terms:</p>
+      <ul>
+        <li><strong>Anthropic (Claude)</strong> — coach text generation. Your messages, profile context, recent logs are sent for processing. <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></li>
+        <li><strong>OpenAI (Whisper)</strong> — speech-to-text transcription. Audio is sent for processing. <a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a></li>
+        <li><strong>ElevenLabs</strong> — text-to-speech synthesis. Reply text is sent for processing. <a href="https://elevenlabs.io/privacy-policy">elevenlabs.io/privacy-policy</a></li>
+        <li><strong>Supabase</strong> — backend hosting (Edge Functions + database). Data is stored encrypted at rest. <a href="https://supabase.com/privacy">supabase.com/privacy</a></li>
+        <li><strong>Sentry</strong> — crash reporting (anonymized device info, no profile data). <a href="https://sentry.io/privacy/">sentry.io/privacy</a></li>
+        <li><strong>Apple</strong> — App Store distribution, in-app purchases, optional HealthKit access. <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+      </ul>
+
+      <h2>5. Storage and security</h2>
+      <p>Your profile and logs are stored locally on your device (encrypted by iOS) and may be synced to our Supabase backend (EU region, encrypted at rest, HTTPS in transit). API keys are never exposed to the client.</p>
+
+      <h2>6. Retention</h2>
+      <p>Your data is retained as long as you use the app. You can delete all data by uninstalling KOVA, or by emailing <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a> and requesting deletion of any cloud-synced records.</p>
+
+      <h2>7. Your rights (GDPR / CCPA)</h2>
+      <p>You have the right to access, correct, export, or delete your personal data. To exercise these rights, email <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a>. We respond within 30 days.</p>
+
+      <h2>8. Children</h2>
+      <p>KOVA is not intended for users under 16. We do not knowingly collect data from children. If you believe a child has provided us data, contact us and we will delete it.</p>
+
+      <h2>9. International transfers</h2>
+      <p>Third-party processors (Anthropic, OpenAI, ElevenLabs) may process data in the United States. By using KOVA, you consent to this transfer.</p>
+
+      <h2>10. Changes to this policy</h2>
+      <p>We may update this Privacy Policy. Changes will be posted on this page with a new "Last updated" date. Continued use of the app after changes means you accept the updated policy.</p>
+
+      <h2>11. Contact</h2>
+      <p>Questions or requests: <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a></p>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────── FRANÇAIS -->
+    <section id="lang-fr" class="lang">
+      <p>KOVA est une application de coaching sportif assistée par IA, spécialisée dans la musculation et la course à pied. Cette politique de confidentialité explique quelles données nous collectons, comment nous les utilisons, et les choix dont tu disposes.</p>
+
+      <h2>1. Qui sommes-nous</h2>
+      <p>KOVA est éditée par Enzo Bertolami (le « Développeur »). Contact : <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a>.</p>
+
+      <h2>2. Données que nous collectons</h2>
+
+      <h3>2.1 Profil que tu nous fournis</h3>
+      <ul>
+        <li>Prénom (optionnel)</li>
+        <li>Âge, sexe, taille, poids, unité de poids</li>
+        <li>Préférences d'entraînement : objectif, niveau, jours par semaine, durée de séance, horaire, focus (force / course / les deux), équipement, blessures</li>
+        <li>Profil running : distance cible, allure, kilométrage hebdo, date de course</li>
+        <li>Bases force : 1RM squat, bench, deadlift, overhead press</li>
+        <li>Préférences nutrition : type de régime, allergies, objectif calorique, temps de cuisson, budget courses, macros custom</li>
+        <li>Préférences coach : style, voix activée, langue, notifications</li>
+      </ul>
+
+      <h3>2.2 Apple HealthKit (uniquement avec ton consentement explicite)</h3>
+      <p>Si tu actives HealthKit dans Réglages → Connexions, KOVA lit les données suivantes depuis Apple Santé pour personnaliser le coaching :</p>
+      <ul>
+        <li>Heures de sommeil</li>
+        <li>Variabilité de la fréquence cardiaque (HRV)</li>
+        <li>Fréquence cardiaque au repos</li>
+        <li>Pas et énergie active (du jour)</li>
+        <li>Séances et runs (historique récent)</li>
+        <li>Historique de poids corporel</li>
+        <li>VO2 Max</li>
+      </ul>
+      <p>Ces données <strong>restent sur ton appareil</strong> et ne sont envoyées au coach IA que dans le cadre du contexte de coaching. Tu peux révoquer l'accès HealthKit à tout moment dans Réglages iOS → Confidentialité → Santé.</p>
+
+      <h3>2.3 Logs que tu crées</h3>
+      <ul>
+        <li>Séances de musculation (exos, charges, reps, RPE, durée)</li>
+        <li>Runs (distance, allure, durée)</li>
+        <li>Journal alimentaire (repas, macros)</li>
+        <li>Mesures de poids corporel</li>
+        <li>Records personnels (PR)</li>
+        <li>Conversations avec le coach IA (texte + enregistrements vocaux transitoires)</li>
+      </ul>
+
+      <h3>2.4 Voix (si tu utilises les fonctionnalités vocales)</h3>
+      <p>Quand tu maintiens le bouton micro ou utilises la voix pendant une séance, un court enregistrement audio est capturé localement, puis envoyé à notre backend pour transcription (OpenAI Whisper). Le texte est ensuite traité par le coach IA (Anthropic Claude). L'audio <strong>n'est pas stocké</strong> après transcription. Les réponses du coach peuvent être synthétisées en audio via ElevenLabs et jouées.</p>
+
+      <h3>2.5 Ce que nous NE collectons PAS</h3>
+      <ul>
+        <li>Pas d'identifiants publicitaires</li>
+        <li>Pas de tracking de localisation au-delà de ce que HealthKit fournit si activé</li>
+        <li>Pas de contacts, photos, calendrier</li>
+        <li>Pas d'infos de paiement (le Premium est géré par Apple via l'App Store)</li>
+      </ul>
+
+      <h2>3. Comment nous utilisons tes données</h2>
+      <ul>
+        <li>Générer ton programme d'entraînement personnalisé (plan hebdo, séance du jour)</li>
+        <li>Fournir des réponses de coaching adaptées à tes données</li>
+        <li>Adapter la charge selon les signaux de récup (sommeil, HRV, FC repos)</li>
+        <li>Calculer les objectifs caloriques et macros (TDEE)</li>
+        <li>Détecter les plateaux, suggérer des deloads, reconnaître les PR</li>
+        <li>Diagnostiquer les crashes et améliorer la stabilité de l'app (via Sentry, anonymisé)</li>
+      </ul>
+      <p>Nous <strong>ne vendons pas</strong> tes données. Nous <strong>n'utilisons pas</strong> tes données à des fins publicitaires.</p>
+
+      <h2>4. Sous-traitants tiers</h2>
+      <p>Pour fournir le service, nous partageons un minimum de données avec les prestataires suivants, chacun sous ses propres conditions :</p>
+      <ul>
+        <li><strong>Anthropic (Claude)</strong> — génération de texte coach. Tes messages, contexte profil, logs récents sont envoyés pour traitement.</li>
+        <li><strong>OpenAI (Whisper)</strong> — transcription voix-vers-texte. L'audio est envoyé pour traitement.</li>
+        <li><strong>ElevenLabs</strong> — synthèse texte-vers-voix. Le texte de la réponse est envoyé.</li>
+        <li><strong>Supabase</strong> — hébergement backend (Edge Functions + base de données). Données chiffrées au repos.</li>
+        <li><strong>Sentry</strong> — reporting de crashes (info appareil anonymisée, pas de données profil).</li>
+        <li><strong>Apple</strong> — distribution App Store, achats in-app, accès HealthKit optionnel.</li>
+      </ul>
+
+      <h2>5. Stockage et sécurité</h2>
+      <p>Ton profil et tes logs sont stockés localement sur ton appareil (chiffrement iOS) et peuvent être synchronisés sur notre backend Supabase (région UE, chiffré au repos, HTTPS en transit). Les clés API ne sont jamais exposées côté client.</p>
+
+      <h2>6. Conservation</h2>
+      <p>Tes données sont conservées tant que tu utilises l'app. Tu peux supprimer toutes tes données en désinstallant KOVA, ou en envoyant un email à <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a> pour demander la suppression des éventuels enregistrements cloud.</p>
+
+      <h2>7. Tes droits (RGPD)</h2>
+      <p>Tu as le droit d'accéder, corriger, exporter ou supprimer tes données personnelles. Pour exercer ces droits, écris à <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a>. Nous répondons sous 30 jours.</p>
+
+      <h2>8. Mineurs</h2>
+      <p>KOVA n'est pas destinée aux utilisateurs de moins de 16 ans. Nous ne collectons pas sciemment de données d'enfants. Si tu penses qu'un enfant nous a fourni des données, contacte-nous et nous les supprimerons.</p>
+
+      <h2>9. Transferts internationaux</h2>
+      <p>Les sous-traitants tiers (Anthropic, OpenAI, ElevenLabs) peuvent traiter des données aux États-Unis. En utilisant KOVA, tu consens à ce transfert.</p>
+
+      <h2>10. Modifications de cette politique</h2>
+      <p>Nous pouvons mettre à jour cette politique. Les modifications seront publiées sur cette page avec une nouvelle date « Dernière mise à jour ». L'utilisation continue de l'app après modification vaut acceptation.</p>
+
+      <h2>11. Contact</h2>
+      <p>Questions ou demandes : <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a></p>
+    </section>
+
+    <footer>
+      KOVA · © 2026 Enzo Bertolami · <a href="mailto:enzo.bertolami1@gmail.com">enzo.bertolami1@gmail.com</a>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('section.lang').forEach(s => s.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.querySelectorAll('.lang-toggle button').forEach(b => b.classList.remove('active'));
+      document.getElementById('btn-' + lang).classList.add('active');
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
