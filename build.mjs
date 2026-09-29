@@ -32,7 +32,12 @@ import { fileURLToPath } from 'node:url';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
 const SOURCE = path.join(ICI, 'politique-confidentialite.md');
-const SORTIE = path.join(ICI, 'site', 'index.html');
+/**
+ * Écrit à la racine du dépôt `kova-legal`, parce que c'est ce que GitHub Pages
+ * y sert. Un sous-dossier obligerait à changer la configuration des Pages, et
+ * l'URL publiée dans App Store Connect ne doit plus bouger.
+ */
+const SORTIE = path.join(ICI, 'index.html');
 
 // ─── Conversion ───────────────────────────────────────────────────────────────
 

@@ -31,7 +31,7 @@ survolé.
 
 Le responsable du traitement est l'éditeur de KOVA.
 
-**Contact : _[à compléter — adresse de contact]_**
+**Contact : contact.bertolami@gmail.com**
 
 ---
 
@@ -254,4 +254,4 @@ figure en tête de ce document.
 
 ## 12. Nous contacter
 
-**_[à compléter — adresse de contact]_**
+**contact.bertolami@gmail.com**
