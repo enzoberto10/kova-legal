@@ -1,6 +1,6 @@
 # Politique de confidentialité — KOVA
 
-**Dernière mise à jour : 25 septembre 2026**
+**Dernière mise à jour : 7 octobre 2026**
 
 KOVA est une application d'entraînement qui combine musculation et course à
 pied, avec un coach assisté par intelligence artificielle.
@@ -149,8 +149,7 @@ reçoit que ce qui lui est nécessaire.
 | **Anthropic** (États-Unis) | Ton contexte d'entraînement : prénom, âge, sexe, objectif, niveau, blessures, séances récentes, records, tendance de poids, données de récupération si tu les as autorisées, et le contenu de tes messages | Produire les réponses du coach |
 | **OpenAI** (États-Unis) | L'enregistrement audio, quand tu dictes un message | Transcrire ta voix en texte |
 | **ElevenLabs** (États-Unis) | Le texte de la réponse du coach | Lire la réponse à voix haute |
-| **USDA FoodData Central** (États-Unis) | Le terme que tu cherches | Trouver les valeurs nutritionnelles |
-| **Open Food Facts** (France) | Le code-barres scanné | Identifier le produit |
+| **Open Food Facts** (France) | Le code-barres scanné, ou le nom que tu cherches quand tu lances une recherche de produits de marque | Identifier le produit et ses valeurs nutritionnelles |
 | **Sentry** (États-Unis) | Rapports de plantage : version de l'app, modèle d'appareil, pile d'appel | Corriger les défauts |
 
 Précisions importantes :
@@ -158,8 +157,10 @@ Précisions importantes :
 - **Anthropic et OpenAI n'utilisent pas ces données pour entraîner leurs
   modèles.** C'est une garantie contractuelle de leurs offres professionnelles.
 - **Sentry est configuré pour ne transmettre aucune donnée personnelle.**
-- La recherche d'aliments et le scan de code-barres n'envoient **pas** ton
-  identifiant : ces services ne savent pas qui cherche.
+- La recherche d'aliments courants se fait **sur ton téléphone**, dans la
+  table Ciqual de l'Anses intégrée à l'application : rien n'est envoyé.
+- La recherche de produits de marque et le scan de code-barres n'envoient
+  **pas** ton identifiant : Open Food Facts ne sait pas qui cherche.
 - Aucun de ces prestataires ne reçoit ton historique complet. Ils reçoivent ce
   qui est nécessaire à une opération précise, au moment où elle a lieu.
 
