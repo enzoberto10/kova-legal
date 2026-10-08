@@ -149,7 +149,7 @@ reçoit que ce qui lui est nécessaire.
 | **Anthropic** (États-Unis) | Ton contexte d'entraînement : prénom, âge, sexe, objectif, niveau, blessures, séances récentes, records, tendance de poids, données de récupération si tu les as autorisées, et le contenu de tes messages | Produire les réponses du coach |
 | **OpenAI** (États-Unis) | L'enregistrement audio, quand tu dictes un message | Transcrire ta voix en texte |
 | **ElevenLabs** (États-Unis) | Le texte de la réponse du coach | Lire la réponse à voix haute |
-| **Open Food Facts** (France) | Le code-barres scanné, ou le nom que tu cherches quand tu lances une recherche de produits de marque | Identifier le produit et ses valeurs nutritionnelles |
+| **Open Food Facts** (France) | Le code-barres scanné, le nom que tu cherches quand tu lances une recherche de produits de marque, puis le code-barres du produit que tu choisis dans les résultats (pour lire sa portion) | Identifier le produit et ses valeurs nutritionnelles |
 | **Sentry** (États-Unis) | Rapports de plantage : version de l'app, modèle d'appareil, pile d'appel | Corriger les défauts |
 
 Précisions importantes :
