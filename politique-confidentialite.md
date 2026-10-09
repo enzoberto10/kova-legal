@@ -1,6 +1,6 @@
 # Politique de confidentialité — KOVA
 
-**Dernière mise à jour : 7 octobre 2026**
+**Dernière mise à jour : 8 octobre 2026**
 
 KOVA est une application d'entraînement qui combine musculation et course à
 pied, avec un coach assisté par intelligence artificielle.
@@ -150,13 +150,15 @@ reçoit que ce qui lui est nécessaire.
 | **OpenAI** (États-Unis) | L'enregistrement audio, quand tu dictes un message | Transcrire ta voix en texte |
 | **ElevenLabs** (États-Unis) | Le texte de la réponse du coach | Lire la réponse à voix haute |
 | **Open Food Facts** (France) | Le code-barres scanné, le nom que tu cherches quand tu lances une recherche de produits de marque, puis le code-barres du produit que tu choisis dans les résultats (pour lire sa portion) | Identifier le produit et ses valeurs nutritionnelles |
-| **Sentry** (États-Unis) | Rapports de plantage : version de l'app, modèle d'appareil, pile d'appel | Corriger les défauts |
+| **Sentry** (États-Unis) | Rapports de plantage : version de l'app, modèle d'appareil, pile d'appel, identifiant aléatoire de l'installation, type de programme suivi (musculation, course ou les deux) et formule (gratuite ou Premium) | Corriger les défauts |
 
 Précisions importantes :
 
 - **Anthropic et OpenAI n'utilisent pas ces données pour entraîner leurs
   modèles.** C'est une garantie contractuelle de leurs offres professionnelles.
-- **Sentry est configuré pour ne transmettre aucune donnée personnelle.**
+- **Sentry ne reçoit ni ton nom, ni ton email, ni ton identifiant de compte, ni
+  aucune donnée de santé.** L'identifiant d'installation est tiré au hasard et
+  n'est relié à aucun compte.
 - La recherche d'aliments courants se fait **sur ton téléphone**, dans la
   table Ciqual de l'Anses intégrée à l'application : rien n'est envoyé.
 - La recherche de produits de marque et le scan de code-barres n'envoient
