@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assistance — KOVA</title>
+<meta name="description" content="Aide et contact pour l'application KOVA.">
+<meta name="robots" content="index, follow">
+<style>
+:root {
+  --fond: #ffffff; --texte: #16181d; --doux: #5a6070;
+  --trait: #e3e6ec; --accent: #4b32c3; --surface: #f6f7f9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #0e0f12; --texte: #edeef1; --doux: #a0a6b4;
+    --trait: #262a33; --accent: #c9f04a; --surface: #16181d;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0 auto; max-width: 42rem; padding: 2.5rem 1.25rem 6rem;
+  background: var(--fond); color: var(--texte);
+  font: 400 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-wrap: break-word;
+}
+h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 1.5rem; }
+h2 { font-size: 1.3rem; line-height: 1.3; letter-spacing: -0.01em; margin: 2.75rem 0 0.75rem; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 0.5rem; color: var(--doux); }
+p { margin: 0 0 1rem; }
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.4rem; }
+strong { font-weight: 600; }
+hr { border: 0; border-top: 1px solid var(--trait); margin: 2.5rem 0; }
+a { color: var(--accent); }
+/* Les tableaux listent les prestataires : sur mobile ils doivent défiler
+   horizontalement plutôt que d'écraser le texte en colonnes illisibles. */
+.tableau { overflow-x: auto; margin: 0 0 1.25rem; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; font-size: 0.92rem; min-width: 30rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--trait); }
+th { background: var(--surface); font-weight: 600; white-space: nowrap; }
+@media print {
+  body { max-width: none; color: #000; background: #fff; }
+  .tableau { overflow: visible; } table { min-width: 0; }
+}
+</style>
+</head>
+<body>
+<h1 id="assistance-kova">Assistance — KOVA</h1>
+<p><strong>Contact : contact.bertolami@gmail.com</strong></p>
+<p>Un bug, une question, une idée ? Écris-nous à cette adresse. Pour un problème, dis-nous ce que tu faisais quand il est apparu et le modèle de ton iPhone : ça nous aide à le reproduire.</p>
+<p>KOVA n'est pas un service d'urgence. En cas de douleur, de malaise ou de blessure, consulte un professionnel de santé. Urgence : <strong>15</strong> ou <strong>112</strong>.</p>
+<h2 id="questions-frequentes">Questions fréquentes</h2>
+<h3 id="faut-il-creer-un-compte">Faut-il créer un compte ?</h3>
+<p>Non. KOVA crée un compte anonyme au premier lancement : ni email ni mot de passe. Pour ne pas perdre tes données en changeant d'iPhone, rattache-le à ton identifiant Apple : <strong>Profil → Mes données → Sauvegarder mon compte</strong>.</p>
+<h3 id="comment-retrouver-mon-compte-sur-un-nouvel-iphone">Comment retrouver mon compte sur un nouvel iPhone ?</h3>
+<p>Sur l'écran d'accueil de KOVA, touche <strong>J'ai déjà un compte</strong> et connecte-toi avec le même identifiant Apple. Il faut avoir sauvegardé ton compte avant.</p>
+<h3 id="comment-connecter-l-app-sante">Comment connecter l'app Santé ?</h3>
+<p><strong>Profil → Connexions</strong>. KOVA lit tes séances, ton poids, ton sommeil et ta fréquence cardiaque pour adapter ton programme et mesurer ta récupération. Elle n'écrit jamais dans l'app Santé. Tu peux retirer l'accès à tout moment dans Réglages → Santé → Accès aux données et appareils → KOVA.</p>
+<h3 id="comment-exporter-ou-supprimer-mes-donnees">Comment exporter ou supprimer mes données ?</h3>
+<p><strong>Profil → Mes données</strong>. L'export te donne un fichier avec tout ce que KOVA conserve sur toi. La suppression efface ton compte et toutes tes données, sur ton téléphone et sur nos serveurs, de façon définitive.</p>
+<h3 id="kova-est-elle-payante">KOVA est-elle payante ?</h3>
+<p>Pas pendant l'accès anticipé : toutes les fonctionnalités sont ouvertes et rien n'est à acheter.</p>
+<h2 id="confidentialite">Confidentialité</h2>
+<p>Ce que KOVA collecte, pourquoi, et qui y a accès : <a href="https://enzoberto10.github.io/kova-legal/">politique de confidentialité</a>.</p>
+</body>
+</html>

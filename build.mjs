@@ -1,8 +1,9 @@
 /**
- * KOVA — Génère la page HTML publique de la politique de confidentialité.
+ * KOVA — Génère les pages HTML publiques : politique de confidentialité et
+ * assistance.
  *
  *   node legal/build.mjs
- *   → legal/site/index.html
+ *   → legal/index.html, legal/assistance.html
  *
  * ── Pourquoi un générateur plutôt qu'une page écrite à la main ───────────────
  *
@@ -15,9 +16,9 @@
  * ── Pourquoi un convertisseur maison ────────────────────────────────────────
  *
  * Le document n'utilise qu'un sous-ensemble fermé de Markdown : titres,
- * paragraphes, listes à puces, tableaux, traits de séparation, gras et
- * italique. Pas de liens, pas de code, pas de listes imbriquées, pas de
- * citations. Ajouter une dépendance pour ça, dans un projet qui part sur
+ * paragraphes, listes à puces, tableaux, traits de séparation, gras,
+ * italique et liens (https ou page voisine). Pas de code, pas de listes
+ * imbriquées, pas de citations. Ajouter une dépendance pour ça, dans un projet qui part sur
  * l'App Store, coûte plus cher que les quarante lignes ci-dessous.
  *
  * Le générateur **échoue bruyamment** s'il rencontre une construction qu'il ne
@@ -31,22 +32,37 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ICI = path.dirname(fileURLToPath(import.meta.url));
-const SOURCE = path.join(ICI, 'politique-confidentialite.md');
 /**
  * Écrit à la racine du dépôt `kova-legal`, parce que c'est ce que GitHub Pages
  * y sert. Un sous-dossier obligerait à changer la configuration des Pages, et
- * l'URL publiée dans App Store Connect ne doit plus bouger.
+ * les URL publiées dans App Store Connect ne doivent plus bouger.
  */
-const SORTIE = path.join(ICI, 'index.html');
+const PAGES = [
+  {
+    source: 'politique-confidentialite.md',
+    sortie: 'index.html',
+    description: "Ce que l'application KOVA collecte, où ces données vont, et ce que tu peux en faire.",
+  },
+  {
+    source: 'assistance.md',
+    sortie: 'assistance.html',
+    description: "Aide et contact pour l'application KOVA.",
+  },
+];
 
 // ─── Conversion ───────────────────────────────────────────────────────────────
 
 const echapper = (s) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-/** Gras d'abord : `**` serait sinon mal lu par le motif de l'italique. */
+/**
+ * Gras d'abord : `**` serait sinon mal lu par le motif de l'italique. Les liens
+ * ne sont rendus que vers une adresse https ou une page voisine (`x.html`) :
+ * tout autre lien reste en texte et fait échouer la génération.
+ */
 const enLigne = (s) =>
   echapper(s)
+    .replace(/\[([^\]]+)\]\((https:\/\/[^\s)]+|[\w-]+\.html)\)/g, '<a href="$2">$1</a>')
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/(^|[^\w])_([^_]+)_/g, '$1<em>$2</em>');
 
@@ -120,7 +136,9 @@ function convertir(markdown) {
 
     const texte = bloc.join(' ');
     // Une construction Markdown résiduelle trahirait un cas non prévu.
-    if (/^(>|\d+\.\s|```)/.test(texte)) nonRendu.push(texte.slice(0, 80));
+    if (/^(>|\d+\.\s|```)/.test(texte) || /\]\(/.test(enLigne(texte))) {
+      nonRendu.push(texte.slice(0, 80));
+    }
     out.push(`<p>${enLigne(texte)}</p>`);
   }
 
@@ -145,14 +163,14 @@ function convertir(markdown) {
  * `prefers-color-scheme` plutôt qu'un thème imposé : la page sera surtout lue
  * depuis le téléphone, souvent le soir.
  */
-function page(corps, titre) {
+function page(corps, titre, description) {
   return `<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${echapper(titre)}</title>
-<meta name="description" content="Ce que l'application KOVA collecte, où ces données vont, et ce que tu peux en faire.">
+<meta name="description" content="${echapper(description)}">
 <meta name="robots" content="index, follow">
 <style>
 :root {
@@ -203,19 +221,21 @@ ${corps}
 
 // ─── Exécution ────────────────────────────────────────────────────────────────
 
-const markdown = fs.readFileSync(SOURCE, 'utf8');
-const titre = (/^#\s+(.*)$/m.exec(markdown)?.[1] ?? 'Politique de confidentialité')
-  .replace(/\s*—\s*/g, ' — ');
+for (const { source, sortie, description } of PAGES) {
+  const markdown = fs.readFileSync(path.join(ICI, source), 'utf8');
+  const titre = (/^#\s+(.*)$/m.exec(markdown)?.[1] ?? 'KOVA')
+    .replace(/\s*—\s*/g, ' — ');
+  const fichier = path.join(ICI, sortie);
 
-fs.mkdirSync(path.dirname(SORTIE), { recursive: true });
-fs.writeFileSync(SORTIE, page(convertir(markdown), titre), 'utf8');
+  fs.writeFileSync(fichier, page(convertir(markdown), titre, description), 'utf8');
 
-const octets = fs.statSync(SORTIE).size;
-console.log(`✓ ${path.relative(process.cwd(), SORTIE)} — ${(octets / 1024).toFixed(1)} Ko`);
+  const octets = fs.statSync(fichier).size;
+  console.log(`✓ ${path.relative(process.cwd(), fichier)} — ${(octets / 1024).toFixed(1)} Ko`);
 
-// Un placeholder publié serait pire que pas de page du tout.
-if (/à compléter/i.test(markdown)) {
-  console.log('\n⚠️  Le texte contient encore « à compléter ».');
-  console.log('   Renseigne l\'adresse de contact aux points 1 et 12 avant de publier.');
-  process.exitCode = 1;
+  // Un placeholder publié serait pire que pas de page du tout.
+  if (/à compléter/i.test(markdown)) {
+    console.log(`\n⚠️  ${source} contient encore « à compléter ».`);
+    console.log('   Renseigne l\'adresse de contact avant de publier.');
+    process.exitCode = 1;
+  }
 }

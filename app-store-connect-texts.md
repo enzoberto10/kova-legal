@@ -1,203 +1,197 @@
 # App Store Connect — textes prêts à coller
 
-> Tout est en EN (langue par défaut Apple Reviewer) sauf description marketing FR.
+Chaque promesse ci-dessous a été vérifiée dans le code de l'app (build 93,
+version 1.3.0, 09/10/2026). Avant de la modifier, revérifier : une fiche qui
+promet une fonction absente est un motif de rejet, et une source d'avis à une
+étoile.
+
+**Langue principale : français (France), sans autre localisation.** L'app
+n'existe qu'en français. Une fiche anglaise promettrait une app que le lecteur
+ne pourrait pas utiliser. Seules les notes pour la revue sont en anglais : elles
+s'adressent à l'équipe d'Apple.
+
+Les limites de caractères sont celles d'App Store Connect ; les textes ont été
+comptés.
 
 ---
 
-## 1. App Information
+## 1. Informations sur l'app
 
-### Subtitle (30 chars max)
+### Nom (30 caractères max)
 ```
-AI fitness & running coach
-```
-
-### Promotional Text (170 chars max, peut être changé sans rebuild)
-```
-Your AI coach. Hybrid strength + running. Adaptive program that talks back. Voice-controlled workouts. Powered by Claude, Whisper, ElevenLabs.
+KOVA
 ```
 
-### Description (FR — pour l'App Store français)
+### Sous-titre (30 caractères max)
 ```
-KOVA, c'est ton coach sportif IA dans la poche.
-
-— UN VRAI COACH QUI TE RÉPOND
-Parle-lui à la voix ou par texte. Il connaît ton programme, tes records, ton sommeil, ta récup. Pose-lui n'importe quelle question — il te répond avec tes vraies données.
-
-— UN PROGRAMME QUI S'ADAPTE
-Force, course, ou les deux. KOVA génère ton plan hebdo selon ton objectif (perte de poids, masse, force, marathon...), ton niveau, ton équipement. Et il l'ajuste en temps réel selon ta récup.
-
-— OMNIPOTENCE PAR LA VOIX
-Dis "passe-moi à 5 séances par semaine" → c'est fait. "Mon nouveau squat c'est 140kg" → enregistré. "Prépare-moi un marathon en octobre" → plan complet généré. Aucune autre app ne fait ça.
-
-— RÉCUP INTELLIGENTE
-Connecté à Apple Santé : sommeil, HRV, FC repos. Si t'es sous-récup, KOVA réduit l'intensité avant que tu te blesses.
-
-— PENDANT LA SÉANCE
-Compte à rebours vocal entre les sets. Commandes vocales pour skip, prolonger, demander conseil. Mains libres, casque dans les oreilles.
-
-— NUTRITION
-Calcul TDEE auto, macros custom, contraintes alimentaires (végé, sans gluten, keto...), bibliothèque de repas adaptée à ton temps de cuisson et budget.
-
-— VDOT + KARVONEN
-Calculs scientifiques pour le pacing course et les zones cardiaques.
-
-— PREMIUM
-Voix IA, contexte coach étendu, programmes multi-semaines.
-
-KOVA, c'est le coach que tu voulais — sans rendez-vous, sans abonnement à 200 €/mois, sans copier-coller un plan Reddit.
+Ton coach IA muscu et course
 ```
 
-### Description (EN)
+### Catégorie
+Principale : **Santé et forme**. Secondaire : aucune.
+
+### Copyright
 ```
-KOVA is your AI fitness coach in your pocket.
-
-— A REAL COACH THAT TALKS BACK
-Speak or type. KOVA knows your program, your PRs, your sleep, your recovery. Ask anything — it responds with your actual data.
-
-— A PROGRAM THAT ADAPTS
-Strength, running, or both. KOVA builds your weekly plan around your goal (weight loss, muscle, strength, marathon...), your level, your equipment. Then adjusts it live based on recovery.
-
-— VOICE OMNIPOTENCE
-Say "switch me to 5 sessions a week" → done. "My new squat is 140kg" → logged. "Build me a marathon plan for October" → full program generated. No other app does this.
-
-— SMART RECOVERY
-Connected to Apple Health: sleep, HRV, resting HR. If you're under-recovered, KOVA scales intensity down before you get hurt.
-
-— DURING WORKOUTS
-Voice rest countdowns between sets. Voice commands to skip, extend, ask the coach. Hands-free with earbuds in.
-
-— NUTRITION
-Auto TDEE calculation, custom macros, dietary constraints (vegetarian, gluten-free, keto...), meal library adapted to your cook time and grocery budget.
-
-— VDOT + KARVONEN
-Scientific calculations for run pacing and HR zones.
-
-— PREMIUM
-AI voice replies, extended coach context, multi-week programs.
-
-KOVA is the coach you actually wanted — no appointment, no $200/month subscription, no copy-pasted Reddit plan.
+2026 Enzo Bertolami
 ```
 
-### Keywords (100 chars max, comma-separated)
+### URL de la politique de confidentialité (obligatoire)
 ```
-fitness,coach,ai,running,workout,strength,gym,training,marathon,vdot,nutrition,macro,health,plan
-```
-
-### Support URL
-```
-mailto:enzo.bertolami1@gmail.com
-```
-> OR si tu veux plus propre : crée une simple page "support" à côté de la privacy policy avec ton email.
-
-### Marketing URL (optionnel)
-```
-https://[ton-username-github].github.io/kova-legal/
+https://enzoberto10.github.io/kova-legal/
 ```
 
-### Privacy Policy URL (OBLIGATOIRE)
+### URL d'assistance (obligatoire)
 ```
-https://[ton-username-github].github.io/kova-legal/
+https://enzoberto10.github.io/kova-legal/assistance.html
+```
+App Store Connect refuse une adresse `mailto:` : il faut une page web. Celle-ci
+est générée depuis `assistance.md` par `node build.mjs`.
+
+---
+
+## 2. Fiche de la version
+
+### Texte promotionnel (170 caractères max, modifiable sans nouveau build)
+```
+Accès anticipé : tout est gratuit. Un programme muscu et course qui s'adapte à ta récupération, et un coach IA qui te répond, à l'écrit comme à la voix.
+```
+
+### Description (4 000 caractères max)
+```
+KOVA est ton coach de musculation et de course à pied. Un programme construit pour toi, et un coach IA qui connaît tes séances, tes records et ta récupération.
+
+UN PROGRAMME À TA MESURE
+Musculation, course à pied ou les deux. Choisis ton objectif (perdre du gras, prendre du muscle, devenir plus fort, du premier footing au semi-marathon), ton niveau, ton matériel et le nombre de séances par semaine : KOVA construit ta semaine.
+
+UN COACH QUI TE RÉPOND ET QUI AGIT
+Écris-lui ou parle-lui. Il connaît ton programme et tes données, et il peut agir : adapter la séance du jour, réorganiser ta semaine, préparer les semaines qui mènent à ta course, enregistrer un nouveau record. Il peut aussi te répondre à voix haute.
+
+TA RÉCUPÉRATION, CHAQUE MATIN
+Connecte Apple Santé : KOVA lit ton sommeil, ta variabilité cardiaque et ta fréquence cardiaque au repos, et calcule un score de récupération. Nuit courte, fatigue ou charge qui grimpe trop vite : le coach te propose d'adapter ta séance.
+
+PENDANT LA SÉANCE
+Charges et répétitions préremplies d'après tes séances précédentes, temps de repos annoncé à la voix, records détectés automatiquement. En course, tu coches tes segments un à un.
+
+LA NUTRITION À LA FRANÇAISE
+Besoins caloriques et macros calculés pour toi. Journal des repas avec la table Ciqual de l'ANSES et les produits de marque d'Open Food Facts, scan des codes-barres avec la portion indiquée par le fabricant. Des idées de repas adaptées à ton régime (végétarien, vegan, sans gluten, keto), à ton temps de cuisine et à ton budget.
+
+ALLURES ET ZONES CARDIAQUES
+Allures d'entraînement calculées à partir de ton temps de course (méthode VDOT), zones cardiaques selon ta fréquence cardiaque de réserve (méthode de Karvonen).
+
+LA RÉGULARITÉ, PAS LA PRESSION
+Ta série compte les semaines où tu atteins ton objectif de séances, pas les jours : le repos fait partie du programme. Records, statistiques, calendrier d'activité et leçons courtes pour comprendre ton entraînement.
+
+TES DONNÉES T'APPARTIENNENT
+Pas de compte à créer, pas de publicité, aucun pistage. Ton compte et ton historique sont stockés dans l'Union européenne. Export et suppression depuis Profil, Mes données.
+
+ACCÈS ANTICIPÉ
+Toutes les fonctionnalités sont gratuites pendant l'accès anticipé.
+
+KOVA ne remplace ni un médecin ni un diététicien. En cas de douleur, de blessure ou de problème de santé, consulte un professionnel.
+```
+
+### Mots-clés (100 caractères max)
+```
+musculation,running,nutrition,programme,entrainement,fitness,sport,calories,macros,footing,semi
+```
+Séparés par des virgules, sans espace. Inutile d'y répéter un mot du nom ou du
+sous-titre (« coach », « IA », « muscu », « course ») : Apple les indexe déjà.
+
+### Captures d'écran
+iPhone 6,9 pouces (1320 × 2868), entre 3 et 10 images ; App Store Connect en
+déduit les autres tailles. Ordre proposé :
+1. Accueil : séance du jour et score de récupération
+2. Coach : une conversation où le coach adapte la séance
+3. Séance en cours : séries préremplies et minuteur de repos
+4. Plan de la semaine
+5. Nutrition : journal du jour et recherche d'un produit
+6. Profil : série hebdomadaire et records
+
+---
+
+## 3. TestFlight — test externe
+
+### Description de la bêta (visible par les testeurs)
+```
+KOVA est un coach de musculation et de course à pied, avec un coach IA qui connaît ton programme, tes séances et ta récupération. L'app est en accès anticipé : tout est gratuit, et ton avis compte pour la suite.
+```
+
+### Adresse de retour
+```
+contact.bertolami@gmail.com
+```
+
+### À tester (build 93)
+```
+Merci de tester KOVA !
+
+1. INSCRIPTION — Est-ce clair ? Trop long ? Une question te manque ?
+2. SÉANCE — Depuis l'Accueil, démarre la séance du jour et valide tes séries. En course, coche tes segments.
+3. COACH — Écris-lui, ou maintiens le micro pour lui parler. Demande-lui d'alléger ta séance, de passer à 4 séances par semaine ou d'enregistrer un record.
+4. APPLE SANTÉ — Profil → Connexions. Le lendemain matin, regarde ton score de récupération sur l'Accueil.
+5. NUTRITION — Cherche un aliment, scanne un code-barres, ajoute un repas. Les valeurs sont-elles justes ?
+
+Nouveau dans ce build : la série compte désormais les semaines à l'objectif, un rappel le soir quand la semaine se resserre, la portion du fabricant au scan, une nouvelle icône, et la correction d'un plantage en fin de sortie.
+
+Un bug, une incompréhension, une bonne surprise ? Réponds via TestFlight (capture d'écran + commentaire) ou écris à contact.bertolami@gmail.com.
+```
+
+### Informations pour la revue de la bêta
+
+*Connexion requise :* **Non**
+
+*Coordonnées*
+```
+Prénom : Enzo
+Nom : Bertolami
+Téléphone : [à renseigner]
+Email : contact.bertolami@gmail.com
+```
+
+*Notes pour la revue (en anglais, pour l'équipe d'Apple)*
+```
+KOVA is a strength training and running coach with an AI assistant. The app is in French only.
+
+NO SIGN-IN REQUIRED. An anonymous account is created on first launch. Sign in with Apple is optional (Profil > Mes données > Sauvegarder mon compte) and only backs up the account.
+
+NO PURCHASES. All features are free during early access. This build contains no in-app purchase.
+
+HOW TO TEST
+1. Onboarding (1 to 2 minutes): pick a sport ("Musculation", "Course à pied" or "Les deux"), a goal and a level.
+2. Accueil (Home): tap "Démarrer" on today's session, then tick the sets.
+3. Coach tab: type a message, or press and hold the microphone to dictate. Example: "Que manger avant ma séance ?"
+4. Nutrition tab: search a food or scan a barcode.
+5. Profil > Connexions: optionally connect Apple Health. Read-only (e.g. workouts, weight, sleep, heart rate, HRV, VO2 max); the app never writes to Apple Health.
+6. Account deletion: Profil > Mes données > Supprimer mon compte.
+
+THIRD-PARTY SERVICES
+Called through our backend (Supabase); no API key is shipped in the app:
+- Anthropic Claude: coach replies
+- OpenAI Whisper: speech-to-text when the user dictates
+- ElevenLabs: spoken coach replies
+Called from the app: Open Food Facts (barcode and branded food lookup).
+No advertising, no tracking, no data sold.
+
+HEALTH
+KOVA is not a medical device. The coach states that it does not replace a doctor or a dietitian, refers users to a professional for pain, injury or medical conditions, and never recommends extreme diets.
+
+Contact: contact.bertolami@gmail.com
 ```
 
 ---
 
-## 2. TestFlight — External Testing
+## 4. Étapes dans App Store Connect
 
-### Test Information
-
-**What to Test (visible aux testeurs)**
-```
-Bienvenue dans le beta KOVA ! 🔥
-
-Voici ce sur quoi tu peux nous aider :
-
-1. ONBOARDING — Le flow d'inscription est-il clair ? Trop long ? Manque-t-il une question ?
-
-2. COACH IA — Parle au coach à la voix ou en texte. Demande-lui de modifier ton programme : "passe-moi à 5 séances", "prépare-moi un marathon", "mon nouveau squat est 140kg". Il devrait exécuter sans demander confirmation.
-
-3. SÉANCES — Lance une séance depuis Home. Teste les commandes vocales pendant les rest periods (active le micro).
-
-4. APPLE HEALTH — Connecte Apple Santé dans Profile → Connexions. Vérifie que le coach mentionne ton sommeil/HRV dans ses réponses.
-
-5. NUTRITION — Va dans Nutrition, ajoute un repas. Les macros sont-elles cohérentes ?
-
-REMONTE :
-- Bugs / crashes
-- Choses que tu ne comprends pas
-- Choses qui te paraissent magiques ✨
-
-Reply à ce mail ou DM Enzo.
-
-Merci 🙏
-```
-
-**Beta App Review — Information for Apple**
-
-*Sign-in required?*
-```
-No
-```
-
-*Contact Information*
-```
-First name: Enzo
-Last name: Bertolami
-Phone: [ton numéro]
-Email: enzo.bertolami1@gmail.com
-```
-
-*Review notes (texte pour le reviewer Apple)*
-```
-KOVA is an AI fitness coaching app for strength training and running.
-
-No login is required — users go through onboarding (sport selection, goals, body data) and immediately have access to all features.
-
-KEY FLOWS TO TEST:
-1. Complete the onboarding (~2-3 min). Pick "running" or "both" for the most feature-rich experience.
-2. From Home, tap "Start session" to launch today's workout.
-3. From the Coach tab, send a text message or hold the microphone to record voice. Example: "What should I eat today?"
-4. From Settings → Connections, optionally enable Apple Health (the app reads sleep, HRV, resting HR to personalize coaching).
-
-THIRD-PARTY SERVICES (proxied via our Supabase Edge Functions — no API keys on device):
-- Anthropic Claude (coach LLM)
-- OpenAI Whisper (speech-to-text)
-- ElevenLabs (text-to-speech, Premium feature)
-
-PREMIUM is gated via in-app purchase (StoreKit). Voice replies and extended context are Premium-only. The beta enables Premium for all testers via a flag for testing convenience.
-
-If anything is unclear, contact enzo.bertolami1@gmail.com.
-```
-
-**What's New in This Version (build 60)**
-```
-- AI coach now has full control of your program via conversation: change days/week, restructure multiple weeks, update PRs, switch coaching style, all through voice
-- Multi-week plan generation for race prep
-- Adaptive 1RM auto-progression
-- Apple HealthKit recovery signals (sleep, HRV) injected into coach context
-- Voice rest countdowns during workouts
-- French and English support
-- Sentry crash reporting added
-- TestFlight beta — first external release
-```
-
----
-
-## 3. Steps in App Store Connect (UI)
-
-1. **My Apps → KOVA → App Privacy** → Edit details
-   - Data collected: Health (with consent), User content (workouts/messages), Identifiers (user ID for sync), Diagnostics (Sentry, anonymized)
-   - All "linked to user", "not used for tracking"
-
-2. **My Apps → KOVA → App Information**
-   - Paste subtitle, description (FR + EN), keywords, support URL, marketing URL, privacy URL
-
-3. **My Apps → KOVA → TestFlight**
-   - Pick build 60 → "Manage" → Beta App Review information → paste the review notes above
-   - External Testing → "+ New Group" → "Friends Beta"
-   - Enable Public Link → copy/share with friends
-   - OR add tester emails directly
-   - Submit build 60 for Beta App Review
-
-4. **Wait 24–48h for Apple Beta Review approval.**
-
-5. Once approved → public link goes live → share with friends.
+1. **Confidentialité de l'app** : remplir le questionnaire selon
+   `declaration-app-store.md`, ligne par ligne.
+2. **Informations sur l'app** : sous-titre, catégorie, URL de confidentialité
+   et d'assistance (section 1).
+3. **TestFlight** :
+   - Informations de test : description de la bêta, adresse de retour,
+     coordonnées et notes pour la revue (section 3) ;
+   - choisir le build → « À tester » (section 3) ;
+   - Test externe → nouveau groupe → ajouter le build → soumettre à la revue
+     de la bêta (24 à 48 h) ;
+   - une fois validé : lien public, ou invitations par email.
+4. **Avant la soumission à l'App Store** : description, mots-clés, texte
+   promotionnel et captures (section 2).

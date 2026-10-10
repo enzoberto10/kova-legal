@@ -90,7 +90,7 @@ la catégorie « Santé » ci-dessus.
 | Type | Collecté | Lié | Justification |
 |---|---|---|---|
 | **ID utilisateur** | Oui | Oui | L'identifiant du compte anonyme Supabase |
-| ID appareil | **Non** | — | L'app n'utilise ni IDFA ni IDFV |
+| ID appareil | **Non** | — | L'app n'utilise ni IDFA ni IDFV. L'identifiant d'installation de Sentry ne sert qu'aux rapports de plantage : il relève des diagnostics (2.7), non liés |
 
 ### 2.6 Utilisation
 
@@ -105,7 +105,7 @@ Jamais pour de la publicité.
 
 | Type | Collecté | Lié | Justification |
 |---|---|---|---|
-| **Données de plantage** | Oui | **Non** | Sentry, configuré avec `sendDefaultPii: false` — `src/services/sentry.ts` |
+| **Données de plantage** | Oui | **Non** | Sentry, `sendDefaultPii: false`, aucun identifiant de compte : seulement un identifiant d'installation tiré au hasard par le SDK et deux étiquettes, programme suivi et formule (`setSentryContext`) — `src/services/sentry.ts` |
 | **Données de performance** | Oui | Non | Même source |
 
 ### 2.8 Ce qui n'est PAS collecté
@@ -134,7 +134,8 @@ textes vagues du type « L'app a besoin de cet accès ».
 | `NSCameraUsageDescription` | « KOVA utilise l'appareil photo pour scanner les codes-barres des aliments… » | ✅ précis |
 | `NSMicrophoneUsageDescription` | « KOVA utilise le micro pour que tu puisses parler à ton coach… » | ✅ précis |
 | `microphonePermission` (plugin `expo-av`) | même texte, en français | ✅ corrigé — il était en anglais, et le garde-fou ne le voyait pas : il ne cherchait que les clés en `UsageDescription` |
-| HealthKit (lecture) | — | ⚠️ **à vérifier** : si l'app lit l'app Santé, `NSHealthShareUsageDescription` est obligatoire |
+| `NSHealthShareUsageDescription` (plugin HealthKit, `app.json`) | « KOVA lit tes séances, ton poids, ton sommeil et ta fréquence cardiaque dans l'app Santé pour adapter ton programme et mesurer ta récupération. » | ✅ précis |
+| `NSHealthUpdateUsageDescription` | absent | ✅ normal : l'app ne demande aucune écriture dans l'app Santé (`src/services/healthKit.ts`) |
 
 Sign in with Apple ne demande **aucun texte d'autorisation** : la feuille est
 fournie par iOS et n'est pas personnalisable. Rien à déclarer ici.
