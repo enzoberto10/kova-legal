@@ -99,14 +99,15 @@ sous-titre (« coach », « IA », « muscu », « course ») : Apple les indexe
 
 ### Captures d'écran
 iPhone 6,9 pouces (1320 × 2868), entre 3 et 10 images ; App Store Connect en
-déduit les autres tailles. Les 6 captures sont faites (09/10/2026, build 93 + correctifs d'affichage) :
+déduit les autres tailles. Les 6 captures sont faites (09/10/2026, build 93 + correctifs d'affichage ;
+2, 4 et 5 refaites le 14/10/2026 avec l'espace des milliers) :
 dossier `captures-app-store/` du dépôt de l'app, non versionné. Simulateur
 iPhone 17 Pro Max, iOS 26.5, en français, profil de démo « Thomas » (force +
 course, intermédiaire, 4 séances), historique de 5 semaines inventé.
 1. `1-accueil.png` : score de récupération, coach adaptatif, séance du jour
-2. `2-coach.png` : « J'ai mal dormi cette nuit » et la séance allégée
+2. `2-coach.png` : « J'ai mal dormi cette nuit » un jour de repos : sommeil, alimentation, mobilité
 3. `3-seance.png` : séance en cours, charges préremplies et 1RM estimé
-4. `4-plan.png` : semaine du cycle, jours faits, séance du soir
+4. `4-plan.png` : semaine Pic du cycle, jours faits, séance Tirage du jeudi
 5. `5-nutrition.png` : recherche « fromage blanc » dans la table Ciqual
 6. `6-profil.png` : série de 5 semaines, badges
 
