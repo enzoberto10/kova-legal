@@ -125,7 +125,7 @@ KOVA est un coach de musculation et de course à pied, avec un coach IA qui conn
 contact.bertolami@gmail.com
 ```
 
-### À tester (build 93)
+### À tester (build 96)
 ```
 Merci de tester KOVA !
 
@@ -135,7 +135,7 @@ Merci de tester KOVA !
 4. APPLE SANTÉ — Profil → Connexions. Le lendemain matin, regarde ton score de récupération sur l'Accueil.
 5. NUTRITION — Cherche un aliment, scanne un code-barres, ajoute un repas. Les valeurs sont-elles justes ?
 
-Nouveau dans ce build : la série compte désormais les semaines à l'objectif, un rappel le soir quand la semaine se resserre, la portion du fabricant au scan, une nouvelle icône, et la correction d'un plantage en fin de sortie.
+Nouveau dans ce build : tout est en français, coach compris, avec les nombres à la française (« 82,5 kg », « 2 761 kcal ») ; le gainage et les exercices de maintien se comptent en secondes ; au bout des 4 semaines d'un cycle, l'Accueil et le Plan te proposent de lancer le suivant.
 
 Un bug, une incompréhension, une bonne surprise ? Réponds via TestFlight (capture d'écran + commentaire) ou écris à contact.bertolami@gmail.com.
 ```
